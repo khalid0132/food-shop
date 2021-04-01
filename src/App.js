@@ -1,5 +1,5 @@
 import './App.css';
-import React from "react";
+import React, { useState, createContext } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,12 +13,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/Header';
 import Login from './components/Login/Login';
 import Admin from './components/Admin/Admin';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import NoMatch from './components/NoMatch/NoMatch';
 // import Admin from './components/Admin/Admin;
+export const UserContext = createContext();
 
 function App() {
+  const [signInUser, setSignInUser] = useState({})
   return (
-    <div>
+    <UserContext.Provider value={[signInUser, setSignInUser]}>
+      <p>User email: {signInUser.email}</p>
+
       {/* <p>Email: {email}</p> */}
          <Router>
             <Header></Header>
@@ -29,21 +34,25 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/users">
-            <Checkout />
-          </Route>
+          
+          {/* <Route path="/foods/:_id">
+            <Checkout></Checkout>
+          </Route> */}
           <Route path="/admin">
             <Admin />
           </Route>
           <Route exact path="/">
             <Home />
           </Route>
+          <PrivateRoute path="/checkout/:_id">
+            <Checkout/>
+          </PrivateRoute>
           <Route path="*">
             <NoMatch></NoMatch>
           </Route>
         </Switch>
     </Router>
-    </div>
+    </UserContext.Provider>
   );
 }
 

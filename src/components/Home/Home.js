@@ -19,7 +19,7 @@ const Home = () => {
         .then(res => res.json())
         .then(data => {
             setFoods(data)
-            console.log(data)
+            // console.log(data)
         })
     })
     // const foods = [

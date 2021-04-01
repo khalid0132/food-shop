@@ -1,14 +1,20 @@
 import { Button } from 'react-bootstrap';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 const ViewFood = ({food}) => {
     // const {food} = props.food;
     // const halal = require(`../../images/${food.pic}`);
+    const [item, setItem] = useState([]);
     const {_id} = food;
-    const handleBuy =(_id)=>{
-        console.log('buyingggg')
+    const history = useHistory();
+    const handleBuy =(_id, name, price)=>{
+        // const url = `/foods/${_id}`;
+        history.push(`/checkout/${_id}`);
+        // console.log(id)
     }
+
     return (
 
         // <div className ="col-md-4">
@@ -20,7 +26,7 @@ const ViewFood = ({food}) => {
             <Card.Img variant="top" src={food.imageURL} />
             <Card.Body>
                 <Card.Title className="text-center">{food.name}</Card.Title>
-                <Card.Text className="font-weight-bold">Sek {food.price} /per <Button className="ml-3" variant="primary" onClick={handleBuy}>Buy now</Button></Card.Text>
+                <Card.Text className="font-weight-bold">Sek {food.price} /per <Button className="ml-3" variant="primary" onClick={()=>handleBuy(_id)}>Buy now</Button></Card.Text>
                 
             </Card.Body>
         </Card>
