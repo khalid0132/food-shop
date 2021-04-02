@@ -23,23 +23,23 @@ const Header = () => {
         <Container>
         <nav class="navbar navbar-expand-lg bg-primary ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Stockholm FoodBank</a>
+            <a class="navbar-brand" href="#">stockholms Hemköp</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
         <li class="nav-item">
-          <Link to="/home">Home</Link>
+          <Link to="/home">hem</Link>
         </li>
         <li class="nav-item">
-          <Link to="/orders/id">Orders</Link>
+          <Link to="/orders/id">orders</Link>
         </li>
         <li class="nav-item">
-          <Link to="/admin">Admin</Link>
+          <Link to="/admin">administratör</Link>
         </li>
         <li class="nav-item">
-          <Link to="/login">Login</Link>
+          <Link to="/login">logga in</Link>
         </li>
        
       </ul>
