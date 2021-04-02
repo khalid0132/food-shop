@@ -62,13 +62,14 @@ const Admin = () => {
             <Container>
             <Row>
                 <Col className="col-md-3 product-design mt-5 pt-5">
-                    <h5 className="pb-3" style={{cursor: 'pointer'}}>Manage Product</h5><hr></hr>
-                    <h5 className="pb-3" onClick={handleAdmin} style={{cursor: 'pointer'}}>Add Product</h5><hr></hr>
-                    <h5 className="pb-3" style={{cursor: 'pointer'}}>Edit Product</h5><hr></hr>
+                    <h2>Hantera Mat</h2><hr/>
+                    <h5 className="pb-3" style={{cursor: 'pointer'}}>Hantera produkt</h5><hr/>
+                    <h5 className="pb-3" onClick={handleAdmin} style={{cursor: 'pointer'}}>Lägg till produkt</h5><hr/>
+                    <h5 className="pb-3" style={{cursor: 'pointer'}}>Radigera Produkt</h5><hr/>
                 </Col>
                 <Col className="col-md-9 mt-5">
                   <div className="admin-form">
-                  <h3>Handled by only Administrator</h3>
+                  <h3>Hanteras av endast administratör</h3>
                 <form onSubmit={handleSubmit(onSubmit)}>
                   <p><input name="name" defaultValue="Food Name" ref={register} /></p>
                   <p><input name="price" defaultValue="Food Price" ref={register} /></p>

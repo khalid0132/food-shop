@@ -13,6 +13,7 @@ import ViewFood from '../ViewFood/ViewFood';
 // import photo9 from './soap.png';
 
 const Home = () => {
+    // toggleSpinner();
     const [foods, setFoods] = useState([]);
     useEffect(()=>{
         fetch('https://strawberry-cupcake-78732.herokuapp.com/foods')
@@ -106,5 +107,11 @@ const Home = () => {
         </Container>
     );
 };
+
+// Spinner works as  an extra work
+// const toggleSpinner = () => {
+//     const spinner = document.getElementById("loading_spinner");
+//     spinner.classList.toggle("d-md-none");
+//   };
 
 export default Home;
