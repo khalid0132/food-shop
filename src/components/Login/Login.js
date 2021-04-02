@@ -5,6 +5,8 @@ import firebaseConfig from './firebase.config';
 import { useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { UserContext } from '../../App';
+import './Login.css'
+import { Container } from 'react-bootstrap';
 
 // firebase.initializeApp(firebaseConfig);
 // firebase.initializeApp(firebaseConfig);
@@ -26,11 +28,7 @@ const Login = () => {
   
     //Google function
     const handleGoogleSignIn = () => {
-        console.log('signeddddd')
-
-    
-
-
+      
       firebase.auth()
         .signInWithPopup(provider)
         .then((result) => {
@@ -46,10 +44,12 @@ const Login = () => {
     }
     const {email} = user;
     return (
-        <div className="App mt-5">
-            <button onClick = {handleGoogleSignIn} > Sign in with google </button> 
+        <Container >
+           <div className="App mt-5 admin-form">
+           <button onClick = {handleGoogleSignIn} > Sign in with google </button> 
             <p>E-mail: {email}</p>
-        </div>
+           </div>
+        </Container>
     );
 };
 

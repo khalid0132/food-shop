@@ -15,7 +15,7 @@ import ViewFood from '../ViewFood/ViewFood';
 const Home = () => {
     const [foods, setFoods] = useState([]);
     useEffect(()=>{
-        fetch('http://localhost:7200/foods')
+        fetch('https://strawberry-cupcake-78732.herokuapp.com/foods')
         .then(res => res.json())
         .then(data => {
             setFoods(data)

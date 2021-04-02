@@ -23,7 +23,7 @@ const Admin = () => {
       imageURL: imageURL
     };
     // console.log(data);
-    const url = `http://localhost:7200/admin`;
+    const url = `https://strawberry-cupcake-78732.herokuapp.com/admin`;
 
     // console.log(eventData)
 
@@ -61,10 +61,10 @@ const Admin = () => {
        
             <Container>
             <Row>
-                <Col className="col-md-3 product-design mt-5">
-                    <h5 style={{cursor: 'pointer'}}>Manage Product</h5>
-                    <h5 onClick={handleAdmin} style={{cursor: 'pointer'}}>Add Product</h5>
-                    <h5 style={{cursor: 'pointer'}}>Edit Product</h5>
+                <Col className="col-md-3 product-design mt-5 pt-5">
+                    <h5 className="pb-3" style={{cursor: 'pointer'}}>Manage Product</h5>
+                    <h5 className="pb-3" onClick={handleAdmin} style={{cursor: 'pointer'}}>Add Product</h5>
+                    <h5 className="pb-3" style={{cursor: 'pointer'}}>Edit Product</h5>
                 </Col>
                 <Col className="col-md-9 mt-5">
                   <div className="admin-form">

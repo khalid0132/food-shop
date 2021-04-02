@@ -9,7 +9,7 @@ const ViewFood = ({food}) => {
     const [item, setItem] = useState([]);
     const {_id} = food;
     const history = useHistory();
-    const handleBuy =(_id, name, price)=>{
+    const handleBuy =(_id)=>{
         // const url = `/foods/${_id}`;
         history.push(`/checkout/${_id}`);
         // console.log(id)

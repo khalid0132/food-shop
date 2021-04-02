@@ -1,4 +1,6 @@
+import { Button } from 'bootstrap';
 import React, { useContext, useEffect, useState } from 'react';
+import { Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useHistory, useParams } from 'react-router';
 import { UserContext } from '../../App';
@@ -10,7 +12,7 @@ const Checkout = () => {
     // const {_id, name, price} = {food}
     const [product, setProduct] = useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:7200/foods/${_id}`)
+        fetch(`https://strawberry-cupcake-78732.herokuapp.com/foods/${_id}`)
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -35,7 +37,7 @@ const Checkout = () => {
    const newOrder = { ...data };
   
 
-   fetch('http://localhost:7200/addOrder', {
+   fetch('https://strawberry-cupcake-78732.herokuapp.com/addOrder', {
      method: 'POST',
      headers: { 'Content-Type': 'application/json' },
      body: JSON.stringify(newOrder),
@@ -49,14 +51,16 @@ const Checkout = () => {
  };
 
        return (
-        <div>
-            <h1>Checkoutttt</h1>
+      <Container>
+          <div className="App mt-5 admin-form">
+            <h1>Checkout</h1>
             {/* <h3>Name:{product._id} </h3> */}
             <p>Id: {_id}</p>
             <p>Name: {name}</p>
             <p>Price: {price}</p>
-
+            
         </div>
+      </Container>
     );
 };
 
