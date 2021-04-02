@@ -62,9 +62,9 @@ const handleOrder = (_id) =>{
             {/* <p>Id: {_id}</p> */}
             <h5>Namn: {product.name}</h5>
             <p><img src={product.imageURL} alt=""/></p>
-            <p>Pris: {product.price} SEK</p>
+            <p>Pris: <strong>{product.price}</strong> SEK</p>
             <Button variant="primary" onClick={()=>handleOrder(_id)}>Visa orders</Button>{' '}
-            <Button variant="success">Betala nu</Button>{' '}
+            <Button variant="warning" href='https://secure.handelsbanken.se/logon/se/priv/sv/mbidqr/'>Betala nu</Button>{' '}
         </div>
       </Container>
     );

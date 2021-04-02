@@ -23,11 +23,11 @@ const Orders = () => {
       <Container>
             <div className="App mt-5 admin-form">
             {/* <h2>Order_id: {_id}</h2> */}
-            <h5>Order namn: {order.name}</h5>
+            <h5 className=" mb-3">Order namn: {order.name}</h5>
             <p><img src={order.imageURL} alt=""/></p>
-            <p className="mb-5">Order pris: {order.price} SEK</p>
+            <p className="mb-5">Pris: <strong>{order.price}</strong> SEK</p>
             <Button variant="danger" onClick={handleDelete}>Radera </Button>{' '}
-            <Button variant="success" >Betala nu </Button>{' '}
+            <Button variant="success" href="https://secure.handelsbanken.se/logon/se/priv/sv/mbidqr/">Betala nu </Button>{' '}
         </div>
       </Container>
     );
