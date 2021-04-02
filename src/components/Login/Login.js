@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { UserContext } from '../../App';
 import './Login.css'
-import { Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 
 // firebase.initializeApp(firebaseConfig);
 // firebase.initializeApp(firebaseConfig);
@@ -46,7 +46,8 @@ const Login = () => {
     return (
         <Container >
            <div className="App mt-5 admin-form">
-           <button onClick = {handleGoogleSignIn} > Sign in with google </button> 
+           {/* <button onClick = {handleGoogleSignIn} > Sign in with google </button> */}
+           <Button variant="success" onClick={handleGoogleSignIn}>Sign in with google </Button>{' '} 
             <p>E-mail: {email}</p>
            </div>
         </Container>

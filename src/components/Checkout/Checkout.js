@@ -1,6 +1,6 @@
-import { Button } from 'bootstrap';
+// import { Button } from 'bootstrap';
 import React, { useContext, useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Button, Container } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import { useHistory, useParams } from 'react-router';
 import { UserContext } from '../../App';
@@ -49,7 +49,10 @@ const Checkout = () => {
        }
      });
  };
-
+const handleOrder = (_id) =>{
+  console.log('View Order')
+  history.push(`/orders/${_id}`);
+}
        return (
       <Container>
           <div className="App mt-5 admin-form">
@@ -58,7 +61,8 @@ const Checkout = () => {
             <p>Id: {_id}</p>
             <p>Name: {name}</p>
             <p>Price: {price}</p>
-            
+            <Button variant="primary" onClick={()=>handleOrder(_id)}>View Orders</Button>{' '}
+            <Button variant="success" onClick={()=>handleOrder(_id)}>Payment</Button>{' '}
         </div>
       </Container>
     );
