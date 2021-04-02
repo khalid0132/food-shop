@@ -14,8 +14,8 @@ const Orders = () => {
       <Container>
             <div className="App mt-5 admin-form">
             <h2>Order_id: {_id}</h2>
-            <h3>Order Name: {name}</h3>
-            <h3>Order Price: {price}</h3>
+            <p>Order Name: {name}</p>
+            <p className="mb-5">Order Price: {price}</p>
             <Button variant="danger" onClick={handleDelete}>Delete </Button>{' '}
             <Button variant="success" >Payment </Button>{' '}
         </div>
