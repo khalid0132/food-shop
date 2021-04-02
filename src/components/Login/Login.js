@@ -47,8 +47,8 @@ const Login = () => {
         <Container >
            <div className="App mt-5 admin-form">
            {/* <button onClick = {handleGoogleSignIn} > Sign in with google </button> */}
-           <Button variant="success" onClick={handleGoogleSignIn}>Sign in with google </Button>{' '} 
-            <p>E-mail: {email}</p>
+           <Button variant="success" onClick={handleGoogleSignIn}>Logga in med google </Button>{' '} 
+            <p>E-post: {email}</p>
            </div>
         </Container>
     );

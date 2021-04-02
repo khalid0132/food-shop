@@ -16,17 +16,11 @@ const ViewFood = ({food}) => {
     }
 
     return (
-
-        // <div className ="col-md-4">
-        //     {/* <img src={require(`../../images/${food.pic}`)} alt=""/> */}
-        //     <p>{food.name}</p>
-        //     <p>{food.price}</p>
-        // </div>
         <Card style={{ width: '18rem' }} className="container mb-4 mt-4" >
             <Card.Img variant="top" src={food.imageURL} />
             <Card.Body>
                 <Card.Title className="text-center">{food.name}</Card.Title>
-                <Card.Text className="font-weight-bold">Sek {food.price} /per <Button className="ml-3" variant="primary" onClick={()=>handleBuy(_id)}>Buy now</Button></Card.Text>
+                <Card.Text className="font-weight-bold">Sek {food.price} /per <Button className="ml-3" variant="primary" onClick={()=>handleBuy(_id)}>Köp nu</Button></Card.Text>
                 
             </Card.Body>
         </Card>

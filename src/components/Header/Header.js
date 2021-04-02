@@ -7,23 +7,11 @@ const Header = () => {
     return (
         
     <div className="header">
-          {/* <Nav defaultActiveKey="/home" as="ul">
-        <Nav.Item as="li">
-            <Nav.Link href="/home">Active</Nav.Link>
-        </Nav.Item>
-            <Nav.Item as="li">
-            <Nav.Link eventKey="link-1" >Link</Nav.Link>
-             </Nav.Item>
-            <Nav.Item as="li">
-            <Nav.Link eventKey="link-2" >Link</Nav.Link>
-        </Nav.Item>
-        </Nav> */}
-
-
+      
         <Container>
         <nav class="navbar navbar-expand-lg bg-primary ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">stockholms Hemköp</a>
+            <a class="navbar-brand" href="#">stockholms hemköp</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,7 +21,7 @@ const Header = () => {
           <Link to="/home">hem</Link>
         </li>
         <li class="nav-item">
-          <Link to="/orders/id">orders</Link>
+          <Link to="/orders/:_id">orders</Link>
         </li>
         <li class="nav-item">
           <Link to="/admin">administratör</Link>

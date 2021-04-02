@@ -23,6 +23,8 @@ const Home = () => {
             // console.log(data)
         })
     })
+
+    // FAKE DATA THAT NOT USED. COLLECTED FROM DATABASE
     // const foods = [
     //     {
     //         imgUrl: photo1,
@@ -72,33 +74,6 @@ const Home = () => {
     // ]
     return (
         <Container>
-            {/* navbar */}
-            {/* <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Foodbank</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto ml-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Orders</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link active" href="#">Admin</a>
-                        </li>
-                        <li class="nav-item">
-                        <a class="nav-link active" href="#">Login</a>
-                        </li>
-                    </ul>
-
-                    </div>
-                </div>
-                </nav> */}
-
             <div className="row">
                 {
                     foods.map(food => <ViewFood food = {food}></ViewFood>)

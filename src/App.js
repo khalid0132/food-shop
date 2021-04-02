@@ -23,7 +23,7 @@ function App() {
   const [signInUser, setSignInUser] = useState({})
   return (
     <UserContext.Provider value={[signInUser, setSignInUser]}>
-      <p>User email: {signInUser.email}</p>
+      <p>Användare e-post: {signInUser.email}</p>
 
       {/* <p>Email: {email}</p> */}
          <Router>
