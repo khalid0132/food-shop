@@ -6,13 +6,13 @@ import { useHistory } from 'react-router-dom';
 const ViewFood = ({food}) => {
     // const {food} = props.food;
     // const halal = require(`../../images/${food.pic}`);
-    const [item, setItem] = useState([]);
+    // const [item, setItem] = useState([]);
     const {_id} = food;
     const history = useHistory();
     const handleBuy =(_id)=>{
         // const url = `/foods/${_id}`;
         history.push(`/checkout/${_id}`);
-        // console.log(id)
+        // console.log(id) // CHECK VIDEO 38-5-3/4
     }
 
     return (

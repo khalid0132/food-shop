@@ -1,12 +1,16 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Button } from 'react-bootstrap';
 import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import { UserContext } from '../../App';
 
 const Orders = () => {
     const {_id} = useParams();
         const [order, setOrder] = useState([]);
+
+        // Context API
+        const [signInUser, setSignInUser] = useContext(UserContext);
     useEffect(()=>{
         fetch(`https://strawberry-cupcake-78732.herokuapp.com/foods/${_id}`)
         .then(res => res.json())
@@ -28,6 +32,7 @@ const Orders = () => {
             <p className="mb-5">Pris: <strong>{order.price}</strong> SEK</p>
             <Button variant="danger" onClick={handleDelete}>Radera </Button>{' '}
             <Button variant="success" href="https://secure.handelsbanken.se/logon/se/priv/sv/mbidqr/">Betala nu </Button>{' '}
+            {/* <p>User Email: {signInUser.email}</p> */}
         </div>
       </Container>
     );
