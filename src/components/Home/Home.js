@@ -16,7 +16,7 @@ const Home = () => {
     // toggleSpinner();
     const [foods, setFoods] = useState([]);
     useEffect(()=>{
-        fetch('https://strawberry-cupcake-78732.herokuapp.com/foods')
+        fetch('http://localhost:7200/foods')
         .then(res => res.json())
         .then(data => {
             setFoods(data)

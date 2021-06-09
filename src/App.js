@@ -23,7 +23,7 @@ function App() {
   const [signInUser, setSignInUser] = useState({})
   return (
     <UserContext.Provider value={[signInUser, setSignInUser]}>
-      <p>Användare e-post: {signInUser.email}</p>
+      <p>User e-mail: {signInUser.email}</p>
 
       {/* <p>Email: {email}</p> */}
          <Router>
@@ -36,9 +36,9 @@ function App() {
             <Login />
           </Route>
           
-          <Route path="/orders/:_id">
+          <PrivateRoute path="/orders">
             <Orders></Orders>
-          </Route>
+          </PrivateRoute>
           <PrivateRoute path="/admin">
             <Admin />
           </PrivateRoute>

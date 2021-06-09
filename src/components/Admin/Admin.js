@@ -23,7 +23,7 @@ const Admin = () => {
       imageURL: imageURL
     };
     // console.log(data);
-    const url = `https://strawberry-cupcake-78732.herokuapp.com/admin`;
+    const url = `https://strawberry-cupcake-78732.herokuapp.com/addFoods`;
 
     // console.log(eventData)
 
